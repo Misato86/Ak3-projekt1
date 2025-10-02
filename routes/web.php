@@ -16,6 +16,8 @@
 $router->get('/', function () use ($router) {
     return view('welcome');
 });
+$router->get('/farger', 'ColorController@show');
+$router->post('/farger', 'ColorController@post');
 $router->get('/{id}', function ($id) use ($router) {
     return view('hello', ['namn' => $id]);
 });
