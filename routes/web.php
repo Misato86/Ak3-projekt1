@@ -17,7 +17,7 @@ $router->get('/{id:(?!farger$)}', function () use ($router) {
     return view('welcome');
 });
 $router->get('/farger', 'ColorController@show');
-$router->get('/farger/{back}/{front}', 'ColorController@withParams');
+$router->get('/farger/{back}[/{front}]', 'ColorController@withParams');
 $router->post('/farger', 'ColorController@post');
 $router->get('/{id}', function ($id) use ($router) {
     return view('hello', ['namn' => $id]);
