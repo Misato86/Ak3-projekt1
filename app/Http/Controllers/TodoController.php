@@ -37,11 +37,22 @@ class TodoController extends Controller {
     function remove(Request $request) {
         $id = $request -> get('uppgift');
         $this -> repo -> delete($id);
-        
+
         //Läs hela förvaret
         $lista = $this -> repo -> all();
 
         return View::make('todo', ['lista' => $lista]);
+    }
+    function check(Request $request) { 
+        $id = $request -> get('uppgift');
+        $uppgift = $this -> repo -> get($id);
+        $uppgift -> done = !$uppgift -> done;
+        $this -> repo -> update($uppgift);
+
+        //Läs hela förvaret
+        $lista = $this -> repo -> all();
+        return View::make('todo', ['lista' => $lista]);
+    
     }
 }
 
