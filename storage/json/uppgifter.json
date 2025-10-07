@@ -1,1 +1,27 @@
-[]
+{
+    "1": {
+        "id": 1,
+        "text": "Äta",
+        "done": true
+    },
+    "2": {
+        "id": 2,
+        "text": "Äta",
+        "done": true
+    },
+    "3": {
+        "id": 3,
+        "text": "Äta",
+        "done": true
+    },
+    "4": {
+        "id": 4,
+        "text": "gdfgdfg",
+        "done": false
+    },
+    "5": {
+        "id": 5,
+        "text": "HEJ",
+        "done": true
+    }
+}
