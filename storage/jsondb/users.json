@@ -1,7 +1,17 @@
 {
-    "1": {
-        "id": 1,
+    "3": {
+        "id": 3,
         "namn": "Kjell",
         "epost": "kjell@home.se"
+    },
+    "4": {
+        "id": 4,
+        "namn": "fhghg",
+        "epost": "Jesper@home.se"
+    },
+    "5": {
+        "id": 5,
+        "namn": "melker",
+        "epost": "Jesper@home.se"
     }
 }

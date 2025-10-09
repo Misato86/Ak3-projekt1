@@ -15,6 +15,9 @@
 <body>
     <h1>Användare</h1>
     <form method="POST">
+        @if(isset($user))
+            <input type = "hidden" name = "id" value = "{{$user -> id}}">
+        @endif
         <label> Namn:
             <input name = "namn" required placeholder = "Ange namn" value = "{{$user -> namn ?? ''}}">
         </label>
@@ -23,6 +26,23 @@
         </label>
         <input type = "submit" value = "Spara">
         <input type = "reset" value = "Ångra">
+        @if(isset($user))
+            <input type = "submit" name = "delete" value = "Ta bort">
+        @endif
     </form>
+    @if (!empty($lista))
+        <h2>
+            Användarlista
+        </h2>
+        <ul>
+            @foreach($lista as $u)
+                <li>
+                    {{$u -> id}}.
+                    <a href = "/anvandare/{{$u -> id}}"> {{$u -> namn}}</a>
+                    {{$u -> epost}}
+                </li>
+            @endforeach
+        </ul>
+    @endif
 </body>
 </html>

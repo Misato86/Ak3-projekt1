@@ -31,6 +31,8 @@ $router -> put('/todo', 'TodoController@check');
 
 //användare
 $router -> get('/anvandare', 'UserController@show');
+$router -> get('/anvandare/{id}', 'UserController@showUser');
+$router -> post('/anvandare/{id}', 'UserController@modifyUser');
 $router -> post('/anvandare', 'UserController@add');
 
 
