@@ -29,6 +29,11 @@ $router -> post('/todo', 'TodoController@add');
 $router -> delete('/todo', 'TodoController@remove');
 $router -> put('/todo', 'TodoController@check');
 
+//användare
+$router -> get('/anvandare', 'UserController@show');
+$router -> post('/anvandare', 'UserController@add');
+
+
 //Fallback
 $router->get('/{id}', function ($id) use ($router) {
     $reserved = ['todo', 'farger'];
@@ -36,4 +41,4 @@ $router->get('/{id}', function ($id) use ($router) {
         return redirect ('/' . strtolower($id));
     }
     return view('hello', ['namn' => $id]);
-});
+}); 
