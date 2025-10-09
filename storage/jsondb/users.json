@@ -1,17 +1,20 @@
 {
+    "2": {
+        "id": 2,
+        "namn": "melker",
+        "epost": "Jesper@home.se",
+        "losenord": ""
+    },
     "3": {
         "id": 3,
-        "namn": "Kjell",
-        "epost": "kjell@home.se"
+        "namn": "fhghg",
+        "epost": "isac@icloud.net",
+        "losenord": "$2y$12$ICYrVIBFam2qaTVCHQYmpei3VfuuMpY2cafHDBiTQZTEjBZTQ6zSO"
     },
     "4": {
         "id": 4,
-        "namn": "fhghg",
-        "epost": "Jesper@home.se"
-    },
-    "5": {
-        "id": 5,
-        "namn": "melker",
-        "epost": "Jesper@home.se"
+        "namn": "Jesper",
+        "epost": "kjell@home.se",
+        "losenord": ""
     }
 }

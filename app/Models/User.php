@@ -8,6 +8,7 @@ use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Laravel\Lumen\Auth\Authorizable;
+use Illuminate\Support\Facades\Hash;
 
 class User extends Model implements AuthenticatableContract, AuthorizableContract
 {
@@ -19,7 +20,7 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
      * @var array
      */
     protected $fillable = [
-        'id', 'namn', 'epost',
+        'id', 'namn', 'epost', 'losenord',
     ];
 
     /**
@@ -30,4 +31,23 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
     protected $hidden = [
         'password',
     ];
+
+    public function setLosenordAttribute($value) {
+        //Hasha lösenordet om det behövs
+        if(!empty($value) && Hash::needsRehash($value)) {
+            $this -> attributes['losenord'] = Hash::make($value);
+        } else {
+            $this -> attributes['losenord'] = $value;
+        }
+    }
+
+    public function fill(array $attributes) {
+        if(array_key_exists('losenord', $attributes) && empty($attributes['losenord'])) {
+            isset($attributes['losenord']);
+        }
+        return parent::fill($attributes);
+    }
+
+
+
 }
