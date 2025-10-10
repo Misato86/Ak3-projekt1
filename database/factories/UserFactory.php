@@ -26,6 +26,7 @@ class UserFactory extends Factory
             'namn' => "whatever",
             'epost' => "ahetever",
             'losenord' => '',
+            'admin' => 0
         ];
     }
 }
