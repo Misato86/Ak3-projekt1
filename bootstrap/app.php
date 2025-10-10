@@ -79,9 +79,11 @@ $app -> middleware([App\Http\Middleware\LowerCaseurls::class, Illuminate\Session
 //     App\Http\Middleware\ExampleMiddleware::class
 // ]);
 
-// $app->routeMiddleware([
-//     'auth' => App\Http\Middleware\Authenticate::class,
-// ]);
+ $app->routeMiddleware([
+     'auth' => App\Http\Middleware\AuthenticatedUser::class,
+     // legacy/explicit route key used in routes/web.php
+     'auth.user' => App\Http\Middleware\AuthenticatedUser::class,
+ ]);
 
 /*
 |--------------------------------------------------------------------------

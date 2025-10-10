@@ -18,6 +18,6 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         $this -> app -> bind(UppgiftRepo::class, JsonUppgiftRepo::class);
-        $this -> app -> bind(UserRepo::class, JsonuserRepo::class);
+        $this -> app -> bind(UserRepo::class, JsonUserRepo::class);
     }
 }
