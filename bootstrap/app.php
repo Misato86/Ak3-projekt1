@@ -59,8 +59,9 @@ $app->singleton(
 |
 */
 
-$app->configure('app');
-$app->configure('view');
+$app -> configure('app');
+$app -> configure('view');
+$app -> configure('session');
 
 /*
 |--------------------------------------------------------------------------
@@ -72,7 +73,8 @@ $app->configure('view');
 | route or middleware that'll be assigned to some specific routes.
 |
 */
-$app -> middleware([App\Http\Middleware\LowerCaseurls::class]);
+$app -> middleware([App\Http\Middleware\LowerCaseurls::class, Illuminate\Session\Middleware\StartSession::class
+]);
 // $app->middleware([
 //     App\Http\Middleware\ExampleMiddleware::class
 // ]);

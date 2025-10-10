@@ -30,10 +30,22 @@ interface UserRepo {
      */
     public function update(User $user): Void;
     /**
-     * 
+     * @param string $id
+     * @return void
      */
 
 
     public function delete(string $id): Void;
+    /**
+     * 
+     * 
+     */
 
+
+    public function getuserByEmail(string $email):?User;
+
+    /**
+     * 
+     * 
+     */
 }

@@ -12,5 +12,19 @@
         "epost": "kjell@home.se",
         "losenord": "",
         "admin": "0"
+    },
+    "3": {
+        "id": 3,
+        "namn": "Kjell",
+        "epost": "kjell@home.se",
+        "losenord": "$2y$12$QL3BEfkztQ7BjtTU1Q0Lg.8\/eB\/dgHvSd7Lg5BgmGhDuwXkDUtFYS",
+        "admin": 0
+    },
+    "4": {
+        "id": 4,
+        "namn": "Isac",
+        "epost": "isac@icloud.net",
+        "losenord": "$2y$12$j3kFjQCBsw.mbZAKfy7IUuEU8pOjHYTLMrEOwP7tczssnz3pkIyLa",
+        "admin": 0
     }
 }
