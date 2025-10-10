@@ -80,7 +80,6 @@ $app -> middleware([App\Http\Middleware\LowerCaseurls::class, Illuminate\Session
 // ]);
 
  $app->routeMiddleware([
-     'auth' => App\Http\Middleware\AuthenticatedUser::class,
      // legacy/explicit route key used in routes/web.php
      'auth.user' => App\Http\Middleware\AuthenticatedUser::class,
  ]);
