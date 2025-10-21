@@ -3,28 +3,42 @@
         "id": 1,
         "namn": "melker",
         "epost": "kjell@home.se",
-        "losenord": "",
+        "losenord": "1",
         "admin": "0"
     },
     "2": {
         "id": 2,
         "namn": "melker",
         "epost": "kjell@home.se",
-        "losenord": "",
+        "losenord": "1",
         "admin": "0"
     },
     "3": {
         "id": 3,
-        "namn": "Kjell",
-        "epost": "kjell@home.se",
-        "losenord": "$2y$12$QL3BEfkztQ7BjtTU1Q0Lg.8\/eB\/dgHvSd7Lg5BgmGhDuwXkDUtFYS",
-        "admin": 0
+        "namn": "kalle kula",
+        "epost": "kalle@kula",
+        "losenord": "1",
+        "admin": "1"
     },
     "4": {
         "id": 4,
         "namn": "Isac",
         "epost": "isac@icloud.net",
-        "losenord": "$2y$12$j3kFjQCBsw.mbZAKfy7IUuEU8pOjHYTLMrEOwP7tczssnz3pkIyLa",
+        "losenord": "1",
         "admin": "0"
+    },
+    "5": {
+        "id": 5,
+        "namn": "pelle plutt",
+        "epost": "hoppsan",
+        "losenord": "1",
+        "admin": 0
+    },
+    "6": {
+        "id": 6,
+        "namn": "kalle kula",
+        "epost": "kalle@kula",
+        "losenord": "1",
+        "admin": "1"
     }
 }
