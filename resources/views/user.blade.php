@@ -14,22 +14,23 @@
 </head>
 <body>
     <h1>Användare</h1>
-    @if($me -> admin)
+    @if($me->admin || (isset($user) && $me->id ==$user->id ))
     <form method="POST">
-        @if(isset($user))
+        @if($me->admin && (isset($user) &&  ($me->id!==$user->id)))
             <input type = "hidden" name = "id" value = "{{$user -> id}}">
         @endif
         <label> Namn:
             <input name = "namn" required placeholder = "Ange namn" value = "{{$user -> namn ?? ''}}">
         </label>
         <label>Epost:
-            <input type = "email" name = "epost" required placeholder = "Ange epost" value = "{{$user -> epost ?? ''}}">
+            <input type="email" name="epost" required placeholder="Ange epost"
+                           value="{{$user->epost ?? ''}}">
         </label>
 
         <label> Lösenord:
             <input type = "Password" name = "losenord" placeholder = "Ange lösenord">
         </label>
-        @if(isset($user))
+        @if($me->admin && (isset($user) &&  ($me->id!==$user->id)))
             <label>
                 <input type = "hidden" name = "admin" value = "0">
                 <input type = "checkbox" name = "admin" value = "1" {{$user -> admin ? 'checked' : ''}}> Administratör
@@ -51,7 +52,7 @@
             @foreach($lista as $u)
                 <li>
                     {{$u -> id}}.
-                    @if($me -> admin)
+                    @if($me->admin || $me->id==$u->id )
                         <a href = "/anvandare/{{$u -> id}}"> {{$u -> namn}}</a>
                     @else
                         {{$u -> namn}}

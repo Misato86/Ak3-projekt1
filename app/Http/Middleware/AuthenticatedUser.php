@@ -3,6 +3,7 @@ namespace App\Http\Middleware;
 
 use App\Repositories\Interfaces\UserRepo;
 use Symfony\Component\HttpFoundation\Exception\BadRequestException;
+use Illuminate\Support\Facades\View;
 
 class AuthenticatedUser {
     public function __construct(private UserRepo $repo) {
@@ -21,6 +22,8 @@ class AuthenticatedUser {
 
         //Skicka med användaren i requesten
         $request -> setUserResolver(fn() => $user);
+        // Dela användaren med alla vyer så blade alltid har $me
+        View::share('me', $user);
         return $next($request);
     }
 }
