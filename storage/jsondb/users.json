@@ -6,13 +6,6 @@
         "losenord": "1",
         "admin": "0"
     },
-    "2": {
-        "id": 2,
-        "namn": "melker",
-        "epost": "kjell@home.se",
-        "losenord": "1",
-        "admin": "0"
-    },
     "3": {
         "id": 3,
         "namn": "kalle kula",
@@ -27,18 +20,12 @@
         "losenord": "1",
         "admin": "0"
     },
-    "5": {
-        "id": 5,
+    "12": {
+        "id": 12,
         "namn": "pelle plutt",
-        "epost": "hoppsan",
+        "epost": "hejsan",
         "losenord": "1",
         "admin": 0
-    },
-    "6": {
-        "id": 6,
-        "namn": "kalle kula",
-        "epost": "kalle@kula",
-        "losenord": "1",
-        "admin": "1"
     }
+
 }
