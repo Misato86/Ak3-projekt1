@@ -14,3 +14,10 @@ $router -> post('/todo', 'TodoApiController@add');
 $router -> put('/todo/{id}', 'TodoApiController@update');
 $router -> patch('/todo/{id}', 'TodoApiController@check');
 $router -> delete('/todo}', 'TodoApiController@remove');
+
+//Användare
+$router -> get('/anvandare', 'UserApiController@all');
+$router -> post('/anvandare', 'UserApiController@add');
+$router -> get('/anvandare/{id]', 'UserApiController@update');
+$router -> put('/anvandare', 'UserApiController@check');
+$router -> delete('/anvandare', 'UserApiController@remove');

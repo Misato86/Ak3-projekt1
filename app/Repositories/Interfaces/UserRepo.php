@@ -37,7 +37,8 @@ interface UserRepo {
 
     public function delete(string $id): Void;
     /**
-     * 
+     * @param string $id
+     * @return void
      * 
      */
 

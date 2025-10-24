@@ -55,7 +55,7 @@ class UserController extends Controller {
         $id = $request -> route ('id');
 
         //Bara admin får radera men inte sig själv
-        if($request -> request -> get('delete') && ($id == $me -> id || $me -> admin)) {
+        if($request -> request -> has('delete') && ($id == $me -> id || !$me -> admin)) {
             return View::make('ajabaja');
         } 
         //kontrollera för uppdateringsrättigheter
