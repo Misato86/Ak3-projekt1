@@ -41,4 +41,8 @@ class DbUserRepo implements UserRepo {
     public function getUserByEmail(string $email):?User {
         return User::query() -> where('epost', $email)-> firstOrFail();
     }
+
+    public function findUserByRefreshTokenHash(string $token):?User {
+        return User::query() -> where('refresh_token', $token) -> firstOrFail();
+    }
 }
