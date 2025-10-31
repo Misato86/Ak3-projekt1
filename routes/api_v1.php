@@ -21,3 +21,9 @@ $router -> post('/anvandare', 'UserApiController@add');
 $router -> get('/anvandare/{id]', 'UserApiController@update');
 $router -> put('/anvandare', 'UserApiController@check');
 $router -> delete('/anvandare', 'UserApiController@remove');
+
+// Login och refresh
+$router->post('/login', 'AuthenticationController@login');
+$router->get('/refresh', 'AuthenticationController@refresh');
+$router->delete('/refresh', 'AuthenticationController@logout');
+

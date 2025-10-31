@@ -9,9 +9,7 @@ use Carbon\Carbon;
 use Illuminate\Support\Facades\Hash;
 
 class AuthenticationService {
-    public function __construct(private UserRepo $repo) {
-
-    }
+    public function __construct(private UserRepo $repo, private JwtService $jwt) {}
 
     public function attemptLogin(Login $login) {
         $user = $this -> repo -> getUserByEmail($login -> getEpost());
@@ -73,5 +71,18 @@ class AuthenticationService {
             return null;
         }
         return $user;
+    }
+        public function revokeRefreshToken(User $user) {
+
+
+        $user->refresh_token_hash=null;
+
+
+        $user->refresh_token_expires_at=null;
+
+
+        $this->repo->update($user);
+
+
     }
 }

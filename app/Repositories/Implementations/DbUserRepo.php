@@ -45,4 +45,8 @@ class DbUserRepo implements UserRepo {
     public function findUserByRefreshTokenHash(string $token):?User {
         return User::query() -> where('refresh_token', $token) -> firstOrFail();
     }
+    
+    public function findUserByRefreshToken(string $token):?User {
+        return User::query()->where('refresh_token_hash',$token)->firstOrFail();
+    }
 }

@@ -44,7 +44,7 @@ interface UserRepo {
 
 
     public function getuserByEmail(string $email):?User;
-
+    public function findUserByRefreshToken(string $token):?User;
     /**
      * 
      * 
