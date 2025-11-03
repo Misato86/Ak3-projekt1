@@ -20,6 +20,16 @@ class JsonUserRepo implements UserRepo {
             $this -> data[$item['id']] = new User($item);
         }
     }
+    public function findUserByRefreshToken(string $refreshToken): ?User 
+    {
+        foreach ($this->data as $user) {
+            if ($user->refreshToken === $refreshToken) {
+                return $user;
+            }
+        }
+        return null;
+    }
+
 
     public function all():array {
         return $this -> data;

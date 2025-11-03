@@ -73,7 +73,8 @@ $app -> configure('session');
 | route or middleware that'll be assigned to some specific routes.
 |
 */
-$app -> middleware([App\Http\Middleware\LowerCaseurls::class, Illuminate\Session\Middleware\StartSession::class
+$app -> middleware([
+    App\Http\Middleware\LowerCaseurls::class, Illuminate\Session\Middleware\StartSession::class
 ]);
 // $app->middleware([
 //     App\Http\Middleware\ExampleMiddleware::class
@@ -83,6 +84,9 @@ $app -> middleware([App\Http\Middleware\LowerCaseurls::class, Illuminate\Session
      // legacy/explicit route key used in routes/web.php
      'auth.user' => App\Http\Middleware\AuthenticatedUser::class,
  ]);
+ $app -> routeMiddleware([
+    'api.auth' => App\Http\Middleware\ApiJwtAuthentication::class,
+]);
 
 /*
 |--------------------------------------------------------------------------

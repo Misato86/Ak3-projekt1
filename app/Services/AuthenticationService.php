@@ -59,7 +59,7 @@ class AuthenticationService {
 
     public function validateRefreshToken(string $rawToken):?User {
         $hash = hash('sha256', $rawToken);
-        $user = $this -> repo -> findUserByRefreshTokenHash($hash);
+        $user = $this -> repo -> findUserByRefreshToken($hash);
 
         //Ingen användare hittades
         if(!$user) {
